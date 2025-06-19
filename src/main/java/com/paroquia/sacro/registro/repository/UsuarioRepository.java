@@ -1,4 +1,7 @@
 package com.paroquia.sacro.registro.repository;
 
-public interface UsuarioRepository {
+import com.paroquia.sacro.registro.model.Usuario;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface UsuarioRepository extends MongoRepository<Usuario,String> {
 } 
