@@ -18,11 +18,12 @@ public class Usuario {
     @Id
     private String id;
 
-    private String nome, email,senha;
+    private String nome, login,senha;
 
     private PerfilUsuario perfil;
     private Boolean ativo;
     private LocalDateTime dataCadastro;
+    private boolean senhaGerada;
 
 
 } 

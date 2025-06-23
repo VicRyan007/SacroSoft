@@ -33,6 +33,6 @@ public class Pessoa implements Serializable {
     private Crisma crisma;
     private Matrimonio matrimonio;
 
-
+    private String livroId; // ID do livro onde a pessoa foi registrada
 
 } 
