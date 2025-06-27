@@ -1,6 +1,5 @@
 package com.paroquia.sacro.registro.service;
 
-import com.mongodb.client.model.ReturnDocument;
 import com.paroquia.sacro.registro.exception.PessoaJaExistenteException;
 import com.paroquia.sacro.registro.exception.PessoaNaoEncontradaException;
 import com.paroquia.sacro.registro.exception.PessoaSemBatismoException;

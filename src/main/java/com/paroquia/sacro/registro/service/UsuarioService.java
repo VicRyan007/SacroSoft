@@ -1,6 +1,5 @@
 package com.paroquia.sacro.registro.service;
 
-import com.paroquia.sacro.registro.exception.UsuarioJaExistenteException;
 import com.paroquia.sacro.registro.exception.UsuarioNaoAutorizadoException;
 import com.paroquia.sacro.registro.exception.UsuarioNaoEncontradoException;
 import com.paroquia.sacro.registro.model.Usuario;
