@@ -24,4 +24,5 @@ public class Matrimonio {
     private String conjugeId,nomeConjuge;
     private List<String> testemunhas;
 
+
 } 
