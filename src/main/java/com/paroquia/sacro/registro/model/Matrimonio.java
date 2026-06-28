@@ -17,4 +17,6 @@ public class Matrimonio extends Sacramento {
     private String idConjuge;
     private String nomeConjuge;
     private List<String> testemunhas; // Permite múltiplos padrinhos e testemunhas
+    private List<String> padrinhos; // Permite múltiplos padrinhos
+    private List<String> celebrantes; // Permite múltiplos celebrantes
 }

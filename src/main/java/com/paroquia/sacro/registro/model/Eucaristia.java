@@ -13,6 +13,4 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class Eucaristia extends Sacramento {
     private String catequista;
-    private String padrinho;
-    private String madrinha;
 }

@@ -97,3 +97,30 @@ mvn spring-boot:run
 ```
 
 A API estará rodando por padrão em `http://localhost:8080`.
+---
+
+## Testes automatizados de API
+
+Antes de executar os testes, mantenha o MongoDB rodando localmente em:
+
+```properties
+mongodb://localhost:27017/sacrosoft
+```
+
+Para subir o backend:
+
+```powershell
+mvn spring-boot:run
+```
+
+Para executar os testes de API com Playwright:
+
+```powershell
+npm run test:api
+```
+
+Para abrir o relatorio HTML gerado pelo Playwright:
+
+```powershell
+npm run test:api:report
+```

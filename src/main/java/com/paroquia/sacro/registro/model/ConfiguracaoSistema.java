@@ -1,6 +1,5 @@
 package com.paroquia.sacro.registro.model;
 
-import com.paroquia.sacro.registro.model.enums.PerfilUsuario;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,17 +11,15 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "usuarios")
-public class Usuario {
+@Document(collection = "configuracoes_sistema")
+public class ConfiguracaoSistema {
 
     @Id
     private String id;
 
-    private String nome,login, senha,paroquia;
+    private String nomeParoquia;
+    private String nomeDiocese;
+    private LocalDateTime dataConfiguracao;
+    private Boolean configurado;
 
-    private PerfilUsuario perfil;
-    private Boolean ativo;
-    private LocalDateTime dataCadastro;
-
-
-} 
+}

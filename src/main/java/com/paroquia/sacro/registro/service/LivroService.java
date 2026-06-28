@@ -2,6 +2,7 @@ package com.paroquia.sacro.registro.service;
 
 import com.paroquia.sacro.registro.exception.IdInvalidoException;
 import com.paroquia.sacro.registro.exception.LivroNaoEncontradoException;
+import com.paroquia.sacro.registro.model.ConfiguracaoSistema;
 import com.paroquia.sacro.registro.model.Livro;
 import com.paroquia.sacro.registro.repository.LivroRepository;
 import org.bson.types.ObjectId;
@@ -16,6 +17,9 @@ public class LivroService {
     @Autowired
     private LivroRepository livroRepository;
 
+    @Autowired
+    private ConfiguracaoSistemaService configuracaoService;
+
     public List<Livro> findAll() {
         return livroRepository.findAll();
     }
@@ -29,6 +33,10 @@ public class LivroService {
     }
 
     public Livro create(Livro livro) {
+        ConfiguracaoSistema configuracao = configuracaoService.buscarConfiguracao();
+        if (configuracao != null) {
+            livro.setParoquia(configuracao.getNomeParoquia());
+        }
         validarLivro(livro);
         return livroRepository.save(livro);
     }
